@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "npmClient": "npm",
+  "useWorkspaces": false,
+  "conventionalCommits": true,
+  "exact": true,
+  "packages": ["packages/*"],
+  "command": {
+    "publish": {
+      "npmClient": "npm"
+    }
+  },
+  "changelog": {
+    "labels": {
+      "feat": "New Feature",
+      "fix": "Bug Fix",
+      "docs": "Documentation",
+      "perf": "Performance",
+      "refactor": "Code Refactoring"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@vue-starter/vuex-persist",
+  "version": "2.0.0",
+  "author": "Johannes Werner <johannes.werner86@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "test": "jest --config --coverage"
+  },
+  "dependencies": {
+    "deepmerge": "3.0.0",
+    "jest": "23.6.0",
+    "js-cookie": "2.2.0",
+    "rimraf": "2.6.2",
+    "ts-jest": "22.4.6",
+    "typescript": "3.2.2",
+    "vuex": "3.0.1"
+  },
+  "jest": {
+    "globals": {
+      "window": true
+    },
+    "rootDir": "./src",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      ".(ts|tsx)": "<rootDir>../node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageDirectory": "../coverage"
+  }
+}

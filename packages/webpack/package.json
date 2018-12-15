@@ -1,0 +1,52 @@
+{
+  "name": "@vue-starter/webpack",
+  "version": "2.0.0",
+  "files": [
+    "dist"
+  ],
+  "author": "Johannes Werner <johannes.werner86@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "dev:dev-server": "cross-env NODE_ENV=development webpack --mode development --config ./dist/config/dev-server.js",
+    "dev:server": "cross-env NODE_ENV=development webpack --mode development --config ./dist/config/server.js",
+    "build:spa": "cross-env NODE_ENV=production webpack --mode production --config ./dist/config/spa.js",
+    "build:client": "cross-env NODE_ENV=production webpack --mode production --config ./dist/config/client.js",
+    "build:isomorphic": "cross-env NODE_ENV=production webpack --mode production --config ./dist/config/isomorphic.js",
+    "build:server": "cross-env NODE_ENV=production webpack --mode production --config ./dist/config/server.js",
+    "analyze-bundle": "cross-env ANALYZE=true npm run build:client"
+  },
+  "dependencies": {
+    "@types/webpack": "4.4.20",
+    "@types/webpack-dev-middleware": "2.0.2",
+    "@types/webpack-merge": "4.1.3",
+    "@types/webpack-node-externals": "1.6.3",
+    "autoprefixer": "9.4.2",
+    "compression-webpack-plugin": "2.0.0",
+    "copy-webpack-plugin": "4.6.0",
+    "cross-env": "5.2.0",
+    "css-loader": "2.0.0",
+    "css-mqpacker": "7.0.0",
+    "cssnano": "4.1.7",
+    "file-loader": "2.0.0",
+    "fork-ts-checker-webpack-plugin": "0.5.0",
+    "html-webpack-plugin": "3.2.0",
+    "node-sass": "4.10.0",
+    "postcss-loader": "3.0.0",
+    "sass-loader": "7.1.0",
+    "start-server-webpack-plugin": "2.2.5",
+    "ts-lint": "4.5.1",
+    "ts-loader": "5.3.1",
+    "typescript": "3.2.2",
+    "vue-loader": "15.4.2",
+    "vue-ssr-webpack-plugin": "3.0.0",
+    "vue-template-compiler": "2.5.21",
+    "webpack": "4.27.1",
+    "webpack-bundle-analyzer": "3.0.3",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-middleware": "3.4.0",
+    "webpack-hot-middleware": "2.24.3",
+    "webpack-merge": "4.1.4",
+    "webpack-node-externals": "1.7.2"
+  }
+}
