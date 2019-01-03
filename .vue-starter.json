@@ -9,17 +9,13 @@
     "outputDirectory": "./i18n"
   },
   "jest": {
-    "roots": ["./src"],
-    "verbose": true,
     "globals": {
       "window": true
     },
-    "setupFiles": ["./jestsetup.ts"],
+    "rootDir": ".",
+    "roots": ["<rootDir>/src"],
+    "setupFiles": ["<rootDir>/jestsetup.ts"],
     "moduleFileExtensions": ["js", "vue", "ts", "json"],
-    "transform": {
-      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
     "coverageThreshold": {
       "global": {
