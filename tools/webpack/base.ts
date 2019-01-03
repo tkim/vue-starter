@@ -81,7 +81,10 @@ export const base: webpack.Configuration = {
   plugins: [
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({ PRODUCTION: isProd, DEVELOPMENT: isDev, TEST: false }),
-    new ForkTsCheckerWebpackPlugin({ tslint: resolve('tslint.json'), vue: true }),
+    new ForkTsCheckerWebpackPlugin({
+      // tslint: resolve('tslint.json'),
+      vue: true,
+    }),
   ],
 };
 

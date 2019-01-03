@@ -57,12 +57,12 @@ export const SSRRoutes = (app: Express.Application): any => {
       return res.end('waiting for compilation... refresh in a moment.');
     }
 
-    acceptLanguage.languages(vueStarterConfig.config['supported-locales']);
+    acceptLanguage.languages(vueStarterConfig.i18n.supportedLocales);
 
     const startTime: number = Date.now();
     const acceptLang: string = req.headers['accept-language']
       ? req.headers['accept-language'].toString()
-      : vueStarterConfig.config['default-locale'];
+      : vueStarterConfig.i18n.defaultLocale;
     const defaultLang: string = acceptLanguage.get(acceptLang);
     const errorHandler = (err: any) => {
       if (err && err.code === 404) {

@@ -5,8 +5,7 @@
   },
   "i18n": {
     "defaultLocale": "en",
-    "supportedLocales": ["en", "de", "pt", "zh-cn"],
-    "outputDirectory": "./i18n"
+    "supportedLocales": ["en", "de", "pt", "zh-cn"]
   },
   "jest": {
     "globals": {
