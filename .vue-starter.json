@@ -26,5 +26,6 @@
     },
     "coveragePathIgnorePatterns": ["/node_modules/", "<rootDir>/jestsetup.ts"],
     "coverageDirectory": "./coverage"
-  }
+  },
+  "clean": ["./dist", "./coverage", "./tools/webpack/*.js", "./storybook-static"]
 }
