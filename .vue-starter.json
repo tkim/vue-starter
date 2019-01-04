@@ -27,5 +27,6 @@
     "coveragePathIgnorePatterns": ["/node_modules/", "<rootDir>/jestsetup.ts"],
     "coverageDirectory": "./coverage"
   },
-  "clean": ["./dist", "./coverage", "./tools/webpack/*.js", "./storybook-static"]
+  "clean": ["./dist", "./coverage", "./tools/webpack/*.js", "./storybook-static"],
+  "currentVersion": "v1.4.0"
 }

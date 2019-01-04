@@ -37,6 +37,8 @@
     "clean": "vue-starter-service clean",
     "storybook:dev": "vue-starter-service storybook --dev",
     "storybook:build": "vue-starter-service storybook",
+    "update": "vue-starter-service update",
+
     "prettier": "npm run clean && ./node_modules/.bin/prettier --write \"./**/*.{ts,vue,js,json,scss,sass,css,yaml,yml}\"",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'chore: update changelog' && npm version major && git push origin && git push origin --tags",
     "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'chore: update changelog' && npm version minor && git push origin && git push origin --tags",
@@ -44,7 +46,6 @@
     "dev": "npm run dev:dev-server && npm run dev:server",
     "build": "concurrently \"npm run build:client\" \"npm run build:isomorphic\" \"npm run build:server\"",
     "analyze-bundle": "cross-env ANALYZE=true npm run build:client",
-    "update": "npm run compile-tools && node ./tools/scripts/update.js",
     "compile-tools": "./node_modules/.bin/tsc -p ./tools/",
     "start": "node ./dist/server/server.js",
     "dev:dev-server": "cross-env NODE_ENV=development webpack --mode development --config ./tools/webpack/dev-server.js",
